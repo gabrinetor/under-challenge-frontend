@@ -11,3 +11,8 @@ O desafio consiste em um checkout simples contendo 3 passos (carrinho, pagamento
 3. Acesse [http://localhost:3000](http://localhost:3000) em seu browser. 
 
 4. Teste a aplicaçao. 
+
+#### Rotas 
+/carrinho 
+/pagamento
+/sucesso

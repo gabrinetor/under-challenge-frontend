@@ -1,81 +1,19 @@
-import React from 'react';
-import axios from 'axios';
+import React, { Component } from 'react';
 import Menu from '../../components/Menu';
-import 'bootstrap/dist/css/bootstrap.min.css';
-// import API from '../../data/api';
+import Products from '../../components/Products';
 
-// class Cart extends Component {
-//   handleDubmit = async event => {
-//     event.preventDefault();
-    
-//     const response = await API.get(`5b15c4923100004a006f3c07/${this.state}`);
-
-//     console.log(response);
-//     console.log(response.data);
-//   }
-// }
-
-export default class Cart extends React.Component {
-  state = {
-    products: []
-  }
-
-  componentDidMount() {
-    axios.get(`http://www.mocky.io/v2/5b15c4923100004a006f3c07`)
-      .then(res => {
-        const products = res.data;
-        this.setState({ products });
-      })
-  }
-
+class Cart extends Component {
   render() {
     return (
-      <div className="container">
-      <Menu />
-      <hr />
-      <h1>Carrinho de Compras</h1>
-      <hr />
-      <div className="row">
-        <div className="col">
-          Imagem
-          
-        </div>
-        {/* <div className="col">
-          Nome, Quantidade, Preço
-          <div>
-            { this.state.persons.map(person => <li>{person.username}</li>)}
-          </div>
-        </div>
-        <div className="col">
-          Comprar
-          <div>
-            { this.state.persons.map(person => <li>{person.email}</li>)}
-          </div>
-        </div> */}
+      <div>
+        <Menu />
+        <br /><br />
+        <h1 className="text-center">Carrinho de Compras</h1>
+        <hr />
+        <Products />
       </div>
-     </div>
     );
   }
 }
-  //   render() {
-//     return (
-//       <div>
-//         <Menu />
-//           <div className="container">
-//             <h1>Carrinho de Compras</h1>
-//           </div>
-//           <hr/>
-//           <div className="row">
-//             <div className="col-md-8">
-//               <Api />
-//             </div>
-//           </div>
-//         <Footer />  
-//       </div>
-//   );
-//   }
-    
-// }
 
-
-// export default Cart;
+export default Cart;

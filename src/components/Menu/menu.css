@@ -21,7 +21,7 @@ body {
 svg{
     color: var(--white);
     width: 150%;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 @media (max-width: 800px) {
